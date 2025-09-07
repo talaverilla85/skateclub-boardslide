@@ -76,9 +76,9 @@ export default function GaleriaPage() {
             {galeriaData.map((imagen, index) => (
               <div
                 key={imagen.id}
-                className="group cursor-pointer hover:transform hover:-translate-y-1 transition-all duration-300"
+                className="group cursor-pointer hover:transform hover:-translate-y-1 hover:rotate-1 transition-all duration-300"
               >
-                <div className="relative aspect-square overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                <div className="relative aspect-square overflow-hidden rounded-xl border-2 border-black shadow-[6px_6px_0_#000] group-hover:shadow-[8px_8px_0_#000] transition-all duration-300">
                   <Image
                     src={imagen.src}
                     alt={imagen.alt}
@@ -92,7 +92,7 @@ export default function GaleriaPage() {
                   
                   {/* Categoría */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-yellow-300 border-2 border-black shadow-[2px_2px_0_#000] text-black px-3 py-1 rounded-full text-sm font-semibold">
                       {imagen.categoria}
                     </span>
                   </div>

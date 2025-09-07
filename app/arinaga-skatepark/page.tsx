@@ -195,7 +195,7 @@ export default function ArinagaSkateparkPage() {
                 key={zona.nombre}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${
                   index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                } ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}
               >
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -206,8 +206,8 @@ export default function ArinagaSkateparkPage() {
                   </p>
                   
                   <div className="mb-6">
-                    <span className="inline-block bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                      Nivel: {zona.nivel}
+                    <span className="inline-block px-3 py-1 bg-yellow-300 rounded-full border-2 border-black shadow-[4px_4px_0_#000] text-sm font-semibold mb-4">
+                      {zona.nombre}
                     </span>
                   </div>
                   
@@ -225,7 +225,7 @@ export default function ArinagaSkateparkPage() {
                 </div>
                 
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative">
+                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative border-2 border-black shadow-[6px_6px_0_#000]">
                     <Image
                       src={zona.imagen}
                       alt={zona.nombre}

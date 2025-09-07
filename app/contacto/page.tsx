@@ -1,5 +1,6 @@
 import { generateMetadata } from '@/lib/seo'
 import InscriptionForm from '@/components/InscriptionForm'
+import MagneticButton from '@/components/MagneticButton'
 import { MapPin, Phone, Mail, MessageCircle, Clock } from 'lucide-react'
 
 export const metadata = generateMetadata({
@@ -119,22 +120,21 @@ export default function ContactoPage() {
               Escríbenos directamente por WhatsApp para una respuesta más rápida. 
               Estamos disponibles de 9:00 a 21:00.
             </p>
-            <a
+            <MagneticButton
               href="https://wa.me/34613033413?text=Hola,%20me%20interesa%20información%20sobre%20las%20clases%20de%20skate"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200"
+              className="bg-green-500 hover:bg-green-600 text-white"
             >
-              <MessageCircle className="w-6 h-6" />
-              <span>Escribir por WhatsApp</span>
-            </a>
+              <MessageCircle className="w-6 h-6 inline mr-2" />
+              Escribir por WhatsApp
+            </MagneticButton>
           </div>
         </div>
       </section>
 
       {/* Formulario de Inscripción */}
-      <section id="formulario" className="section-padding">
-        <div className="container-max">
+      <section id="formulario" className="section-padding relative" style={{backgroundImage: 'url("/textures/paper.png")', backgroundSize: 'cover'}}>
+        <div className="absolute inset-0 bg-white/95"></div>
+        <div className="container-max relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Reserva tu Clase de Prueba

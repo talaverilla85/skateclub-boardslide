@@ -2,6 +2,7 @@ import { generateMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import { Users, Target, Clock, CheckCircle } from 'lucide-react'
 import Image from 'next/image'
+import Marquee from '@/components/Marquee'
 
 export const metadata = generateMetadata({
   title: 'Clases de Skate - Niveles y Modalidades',
@@ -59,6 +60,20 @@ export default function ClasesPage() {
         </div>
       </section>
 
+      {/* Marquee de fotos */}
+      <section className="py-8 bg-gray-100">
+        <div className="container-max">
+          <Marquee>
+            <Image src="/gallery/1.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+            <Image src="/gallery/2.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+            <Image src="/gallery/3.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+            <Image src="/gallery/4.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+            <Image src="/gallery/5.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+            <Image src="/gallery/6.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
+          </Marquee>
+        </div>
+      </section>
+
       {/* Classes Grid */}
       <section className="section-padding">
         <div className="container-max">
@@ -66,7 +81,7 @@ export default function ClasesPage() {
             {clasesData.map((clase, index) => (
               <div
                 key={clase.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-[8px_8px_0_#000] border-2 border-black overflow-hidden hover:shadow-[12px_12px_0_#000] hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="relative h-48">
                   <Image
@@ -77,10 +92,10 @@ export default function ClasesPage() {
                     className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                    <span className={`px-3 py-1 rounded-full text-sm font-semibold border-2 border-black shadow-[2px_2px_0_#000] ${
                       clase.color === 'primary' 
-                        ? 'bg-primary-600 text-white' 
-                        : 'bg-secondary-600 text-white'
+                        ? 'bg-yellow-300 text-black' 
+                        : 'bg-[#00e0c7] text-black'
                     }`}>
                       {clase.ageRange}
                     </span>

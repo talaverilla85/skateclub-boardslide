@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bangers } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { defaultMetadata } from '@/lib/seo'
 
 const inter = Inter({ subsets: ['latin'] })
+const bangers = Bangers({ subsets: ['latin'], weight: '400', display: 'swap' })
 
 export const metadata = {
   title: "Skate Club Boardslide",
@@ -60,7 +61,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} selection:bg-black selection:text-white`}>
         <Navbar />
         <main className="min-h-screen">
           {children}

@@ -1,6 +1,6 @@
 import { generateMetadata } from '@/lib/seo'
-import Hero from '@/components/Hero'
-import FeatureCard from '@/components/FeatureCard'
+import HeroUrban from '@/components/HeroUrban'
+import PosterCard from '@/components/PosterCard'
 import FAQ from '@/components/FAQ'
 
 export const metadata = generateMetadata({
@@ -12,9 +12,9 @@ export const metadata = generateMetadata({
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <HeroUrban />
       
-      {/* Features Section */}
+      {/* Features Section - Pósters pegados */}
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <div className="text-center mb-16">
@@ -28,29 +28,21 @@ export default function HomePage() {
             </p>
           </div>
           
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-             <FeatureCard
-               iconName="Award"
-               title="Club Federado"
-               description="Formamos parte de la Federación Española de Patinaje."
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             <PosterCard
+               title="Iniciación"
+               desc="Clases para principiantes de todas las edades. Aprende desde cero con seguridad."
+               icon="/textures/icon-start.svg"
              />
-             <FeatureCard
-               iconName="Users"
-               title="Grupos por Niveles"
-               description="Clases adaptadas a cada nivel: desde iniciación hasta más avanzados."
-               delay={0.1}
+             <PosterCard
+               title="Street"
+               desc="Trucos urbanos, escaleras, barandillas. El skate de calle en su máxima expresión."
+               icon="/textures/icon-street.svg"
              />
-             <FeatureCard
-               iconName="MapPin"
-               title="Street & Bowl"
-               description="Practicamos en el moderno Arinaga Skatepark con zonas específicas para street y bowl."
-               delay={0.2}
-             />
-             <FeatureCard
-               iconName="Shield"
-               title="Material de Préstamo"
-               description="Prestamos el material necesario: tablas, cascos y protecciones para que puedas probar."
-               delay={0.3}
+             <PosterCard
+               title="Bowl"
+               desc="Transiciones, coping, velocidad. Domina el bowl con estilo y técnica."
+               icon="/textures/icon-bowl.svg"
              />
            </div>
         </div>

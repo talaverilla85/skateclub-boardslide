@@ -10,6 +10,17 @@
   body {
     @apply bg-white text-gray-900;
   }
+  
+  /* textura global sutil */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("/textures/noise.png");
+    opacity: 0.04;
+    z-index: 0;
+  }
 }
 
 @layer components {
@@ -27,6 +38,23 @@
   
   .container-max {
     @apply max-w-7xl mx-auto;
+  }
+  
+  /* título con "spray" subrayado */
+  .spray-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .spray-underline::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    height: 14px;
+    background: url("/textures/spray.svg") no-repeat center/100% 100%;
+    opacity: 0.8;
   }
 }
 
