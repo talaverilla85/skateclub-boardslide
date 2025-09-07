@@ -1,11 +1,6 @@
-import { generateMetadata } from '@/lib/seo'
-import { motion } from 'framer-motion'
+'use client'
 
-export const metadata = generateMetadata({
-  title: 'Política de Cookies - Skate Club Boardslide',
-  description: 'Política de cookies del Skate Club Boardslide. Información sobre el uso de cookies en nuestro sitio web.',
-  path: '/cookies'
-})
+import { motion } from 'framer-motion'
 
 export default function CookiesPage() {
   return (

@@ -29,10 +29,10 @@ const InscriptionForm = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errors, setErrors] = useState<Partial<FormData>>({})
+  const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({})
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<FormData> = {}
+    const newErrors: Partial<Record<keyof FormData, string>> = {}
     
     if (!formData.nombre.trim()) newErrors.nombre = 'El nombre es obligatorio'
     if (!formData.padreMadreTutor.trim()) newErrors.padreMadreTutor = 'El nombre del padre/madre/tutor es obligatorio'

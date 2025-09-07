@@ -1,12 +1,7 @@
-import { generateMetadata } from '@/lib/seo'
+'use client'
+
 import { motion } from 'framer-motion'
 import { MapPin, Calendar, Shield, Star, Clock, Users } from 'lucide-react'
-
-export const metadata = generateMetadata({
-  title: 'Arinaga Skatepark - Instalaciones y Ubicación',
-  description: 'Conoce el moderno Arinaga Skatepark inaugurado en 2024. Zonas de Street, Bowl y Flow con las mejores instalaciones de Gran Canaria.',
-  path: '/arinaga-skatepark'
-})
 
 const zonasData = [
   {

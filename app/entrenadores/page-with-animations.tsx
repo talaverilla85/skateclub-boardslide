@@ -1,12 +1,7 @@
-import { generateMetadata } from '@/lib/seo'
+'use client'
+
 import { motion } from 'framer-motion'
 import { Award, Star, Users, MapPin } from 'lucide-react'
-
-export const metadata = generateMetadata({
-  title: 'Nuestros Entrenadores - Skate Club Boardslide',
-  description: 'Conoce a nuestros entrenadores certificados. Profesionales con años de experiencia en competición y enseñanza del skateboarding.',
-  path: '/entrenadores'
-})
 
 const entrenadoresData = [
   {

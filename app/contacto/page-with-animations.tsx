@@ -1,13 +1,8 @@
-import { generateMetadata } from '@/lib/seo'
+'use client'
+
 import { motion } from 'framer-motion'
 import InscriptionForm from '@/components/InscriptionForm'
 import { MapPin, Phone, Mail, MessageCircle, Clock } from 'lucide-react'
-
-export const metadata = generateMetadata({
-  title: 'Contacto - Skate Club Boardslide',
-  description: 'Contacta con el Skate Club Boardslide. Teléfono: +34 613 03 34 13, email: skateclubgrancanaria@gmail.com. Ubicados en Arinaga, Gran Canaria.',
-  path: '/contacto'
-})
 
 const contactoData = [
   {

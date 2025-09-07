@@ -1,12 +1,8 @@
+'use client'
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
-// --- SEO de la página (ajusta si usas otra util) ---
-export const metadata = {
-  title: 'Galería - Skate Club Boardslide',
-  description:
-    'Fotos reales del Skate Club Boardslide en el Skatepark de Playa de Arinaga: clases, bowl, street y comunidad.',
-};
+import React from 'react';
 
 // --- Tus imágenes locales en /public/gallery ---
 type Foto = { id: number; src: string; alt: string; categoria: string };

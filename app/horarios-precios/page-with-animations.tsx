@@ -1,12 +1,8 @@
-import { generateMetadata } from '@/lib/seo'
-import AnimatedSection from '@/components/AnimatedSection'
-import { Clock, Euro, Users, Calendar } from 'lucide-react'
+'use client'
+import { motion } from 'framer-motion' // y AnimatePresence si se usa
 
-export const metadata = generateMetadata({
-  title: 'Horarios y Precios - Skate Club Boardslide',
-  description: 'Consulta nuestros horarios de clases y precios. Bonos mensuales, clases sueltas y descuentos familiares disponibles.',
-  path: '/horarios-precios'
-})
+import { Clock, Euro, Users, Calendar } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const horariosData = [
   {

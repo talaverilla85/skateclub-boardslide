@@ -1,12 +1,7 @@
-import { generateMetadata } from '@/lib/seo'
+'use client'
+
 import { motion } from 'framer-motion'
 import { Calendar, ExternalLink } from 'lucide-react'
-
-export const metadata = generateMetadata({
-  title: 'Noticias - Skate Club Boardslide',
-  description: 'Mantente al día con las últimas noticias, eventos y novedades del Skate Club Boardslide. Sigue nuestras redes sociales para más contenido.',
-  path: '/noticias'
-})
 
 // URLs de ejemplo para posts de Instagram y Facebook
 const instagramPosts = [

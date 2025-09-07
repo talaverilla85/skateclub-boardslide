@@ -1,11 +1,6 @@
-import { generateMetadata } from '@/lib/seo'
-import { motion } from 'framer-motion'
+'use client'
 
-export const metadata = generateMetadata({
-  title: 'Política de Privacidad - Skate Club Boardslide',
-  description: 'Política de privacidad del Skate Club Boardslide. Información sobre el tratamiento de datos personales según el RGPD.',
-  path: '/privacidad'
-})
+import { motion } from 'framer-motion'
 
 export default function PrivacidadPage() {
   return (

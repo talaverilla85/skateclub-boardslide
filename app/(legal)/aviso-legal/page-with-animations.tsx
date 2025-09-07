@@ -1,11 +1,6 @@
-import { generateMetadata } from '@/lib/seo'
-import { motion } from 'framer-motion'
+'use client'
 
-export const metadata = generateMetadata({
-  title: 'Aviso Legal - Skate Club Boardslide',
-  description: 'Aviso legal del Skate Club Boardslide. Información legal sobre el sitio web y los servicios ofrecidos.',
-  path: '/aviso-legal'
-})
+import { motion } from 'framer-motion'
 
 export default function AvisoLegalPage() {
   return (
