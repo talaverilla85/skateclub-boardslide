@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skateclub-boardslide.vercel.app/sitemap.xml
+

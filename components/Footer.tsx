@@ -1,0 +1,151 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { Instagram, Facebook, MessageCircle, MapPin, Phone, Mail } from 'lucide-react'
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container-max section-padding">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Información del club */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/logo.png"
+                alt="Skate Club Boardslide Logo"
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+              <span className="font-bold text-lg">Skate Club Boardslide</span>
+            </div>
+            <p className="text-gray-300 text-sm">
+              Club de skate federado en Gran Canaria. Clases de iniciación para niños y adultos.
+            </p>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.instagram.com/skateclubboardslide"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-400 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/skateclubboardslide"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-400 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://wa.me/34613033413"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-400 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Enlaces rápidos */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Enlaces rápidos</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/clases" className="text-gray-300 hover:text-white transition-colors">
+                  Clases
+                </Link>
+              </li>
+              <li>
+                <Link href="/horarios-precios" className="text-gray-300 hover:text-white transition-colors">
+                  Horarios y Precios
+                </Link>
+              </li>
+              <li>
+                <Link href="/entrenadores" className="text-gray-300 hover:text-white transition-colors">
+                  Entrenadores
+                </Link>
+              </li>
+              <li>
+                <Link href="/arinaga-skatepark" className="text-gray-300 hover:text-white transition-colors">
+                  Arinaga Skatepark
+                </Link>
+              </li>
+              <li>
+                <Link href="/galeria" className="text-gray-300 hover:text-white transition-colors">
+                  Galería
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contacto */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Contacto</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center space-x-3">
+                <MapPin size={16} className="text-primary-400 flex-shrink-0" />
+                <span className="text-gray-300">Playa de Arinaga, Gran Canaria</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone size={16} className="text-primary-400 flex-shrink-0" />
+                <a
+                  href="tel:+34613033413"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  +34 613 03 34 13
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail size={16} className="text-primary-400 flex-shrink-0" />
+                <a
+                  href="mailto:skateclubgrancanaria@gmail.com"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  skateclubgrancanaria@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/aviso-legal" className="text-gray-300 hover:text-white transition-colors">
+                  Aviso Legal
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacidad" className="text-gray-300 hover:text-white transition-colors">
+                  Política de Privacidad
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className="text-gray-300 hover:text-white transition-colors">
+                  Política de Cookies
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {currentYear} Skate Club Boardslide. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
+
