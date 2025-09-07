@@ -1,6 +1,7 @@
 import { generateMetadata } from '@/lib/seo'
 import Link from 'next/link'
 import { Users, Target, Clock, CheckCircle } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata = generateMetadata({
   title: 'Clases de Skate - Niveles y Modalidades',
@@ -100,10 +101,12 @@ export default function ClasesPage() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative h-48">
-                  <img
+                  <Image
                     src={clase.image}
                     alt={clase.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${

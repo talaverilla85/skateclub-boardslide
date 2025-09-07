@@ -1,8 +1,7 @@
 'use client'
-import { motion } from 'framer-motion' // y AnimatePresence si se usa
 
-import { Clock, Euro, Users, Calendar } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Clock, Euro, Users, Calendar } from 'lucide-react'
 
 const horariosData = [
   {

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Award, Star, Users, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const entrenadoresData = [
   {
@@ -87,11 +88,13 @@ export default function EntrenadoresPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative">
-                  <img
+                <div className="relative h-64">
+                  <Image
                     src={entrenador.imagen}
                     alt={entrenador.nombre}
-                    className="w-full h-64 object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                   />
                   <div className="absolute top-4 right-4">
                     <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">

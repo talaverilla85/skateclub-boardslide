@@ -1,5 +1,6 @@
 import { generateMetadata } from '@/lib/seo'
 import { MapPin, Calendar, Shield, Star, Clock, Users } from 'lucide-react'
+import Image from 'next/image'
 
 export const metadata = generateMetadata({
   title: 'Arinaga Skatepark - Instalaciones y Ubicación',
@@ -163,10 +164,12 @@ export default function ArinagaSkateparkPage() {
             
             <div className="relative">
               <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
-                <img
+                <Image
                   src="/skatepark.webp"
                   alt="Vista aérea del Arinaga Skatepark"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -222,11 +225,13 @@ export default function ArinagaSkateparkPage() {
                 </div>
                 
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
-                    <img
+                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative">
+                    <Image
                       src={zona.imagen}
                       alt={zona.nombre}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
                     />
                   </div>
                 </div>
