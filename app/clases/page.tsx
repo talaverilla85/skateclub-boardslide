@@ -71,7 +71,7 @@ export default function ClasesPage() {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,1.2fr] items-start">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-black">
                 <Image
-                  src="/gallery/5.webp"
+                  src="/gallery/2.webp"
                   alt="Clase de iniciación para niños en Arinaga"
                   fill
                   className="object-cover"
