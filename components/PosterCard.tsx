@@ -15,11 +15,18 @@ export default function PosterCard({title, desc, icon}: PosterCardProps){
       className="relative bg-[#fff] rounded-2xl p-5 shadow-[8px_8px_0_#000] border-2 border-black"
     >
       <Image 
-        src="/textures/tape.png" 
+        src="/textures/tape.svg" 
         alt="" 
         width={80} 
         height={40}
-        className="absolute -top-3 left-4 rotate-[-6deg] pointer-events-none" 
+        className="absolute -top-3 left-4 w-20 rotate-[-6deg] pointer-events-none" 
+      />
+      <Image 
+        src="/textures/tape.svg" 
+        alt="" 
+        width={80} 
+        height={40}
+        className="absolute -top-3 right-4 w-20 rotate-[6deg] pointer-events-none" 
       />
       <div className="flex items-start gap-3">
         <Image src={icon} alt="" width={36} height={36} />

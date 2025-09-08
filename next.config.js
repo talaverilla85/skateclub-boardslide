@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'scontent.cdninstagram.com', 'scontent-mad1-1.xx.fbcdn.net'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent.cdninstagram.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent-mad1-1.xx.fbcdn.net',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
   },
 }

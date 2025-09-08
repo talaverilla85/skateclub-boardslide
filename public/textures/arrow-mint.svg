@@ -1,0 +1,10 @@
+<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+  <path d="M10 60 C 70 40, 140 40, 200 60" stroke="#24E6D2" stroke-width="16" stroke-linecap="round" fill="none" filter="url(#soft)"/>
+  <circle cx="10" cy="60" r="10" fill="#24E6D2"/>
+  <path d="M200 60 L 172 45 L 172 75 Z" fill="#24E6D2"/>
+</svg>

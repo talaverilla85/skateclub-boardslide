@@ -1,180 +1,195 @@
-import { generateMetadata } from '@/lib/seo'
-import Link from 'next/link'
-import { Users, Target, Clock, CheckCircle } from 'lucide-react'
-import Image from 'next/image'
-import Marquee from '@/components/Marquee'
+'use client';
 
-export const metadata = generateMetadata({
-  title: 'Clases de Skate - Niveles y Modalidades',
-  description: 'Descubre nuestras clases de skate: Iniciación para niños y adultos. Grupos reducidos con instructores certificados.',
-  path: '/clases'
-})
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-const clasesData = [
-  {
-    id: 'iniciacion-ninos',
-    title: 'Iniciación Niños',
-    ageRange: '6-12 años',
-    duration: '60 minutos',
-    maxStudents: 8,
-    description: 'Clases adaptadas especialmente para los más pequeños, donde aprenden de forma segura y divertida.',
-    objectives: [
-      'Equilibrio básico sobre la tabla',
-      'Posición correcta y seguridad',
-      'Primeros movimientos y giros',
-      'Confianza y diversión'
-    ],
-    image: '/niños.webp',
-    color: 'primary'
-  },
-  {
-    id: 'iniciacion-adultos',
-    title: 'Iniciación Adultos',
-    ageRange: '13+ años',
-    duration: '75 minutos',
-    maxStudents: 6,
-    description: 'Para adultos que quieren empezar desde cero o retomar el skate después de años.',
-    objectives: [
-      'Fundamentos del skateboarding',
-      'Técnicas de empuje y frenado',
-      'Manejo de la tabla en diferentes superficies',
-      'Preparación para niveles avanzados'
-    ],
-    image: '/adulto.webp',
-    color: 'secondary'
-  }
-]
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.5, delay },
+});
 
 export default function ClasesPage() {
   return (
-    <div className="pt-16">
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+    <main className="pt-20">
+      {/* Hero */}
+      <section className="section-padding bg-gradient-to-b from-black to-neutral-900 text-white relative overflow-hidden">
+        <div className="container-max relative z-10">
+          <motion.h1
+            {...fadeUp(0)}
+            className="relative inline-block text-4xl md:text-5xl font-extrabold tracking-wide"
+          >
             Nuestras Clases
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto">
-            Clases de iniciación para todas las edades. Encuentra tu nivel y comienza tu aventura en el skate.
-          </p>
+            <Image
+              src="/textures/spray-underline.svg"
+              alt=""
+              width={320}
+              height={20}
+              className="absolute left-0 -bottom-2 w-64 md:w-80 pointer-events-none select-none"
+            />
+          </motion.h1>
+
+          <motion.p
+            {...fadeUp(0.1)}
+            className="mt-3 md:mt-4 text-white/80 max-w-3xl"
+          >
+            Iniciación para todas las edades en el Skatepark de Playa de Arinaga.
+            Entrenadores titulados, metodología progresiva y ambiente 100% skate.
+          </motion.p>
+        </div>
+        <div
+          className="absolute inset-0 opacity-[.04] pointer-events-none mix-blend-screen"
+          style={{ backgroundImage: 'url(/textures/noise.png)' }}
+        />
+      </section>
+
+      {/* Clases */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-max grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Iniciación Niños */}
+          <motion.article
+            {...fadeUp(0)}
+            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+          >
+            <Image
+              src="/textures/tape.svg"
+              alt=""
+              width={80}
+              height={40}
+              className="absolute -top-4 left-6 w-20 rotate-[-8deg] pointer-events-none select-none"
+            />
+            <Image
+              src="/textures/tape.svg"
+              alt=""
+              width={80}
+              height={40}
+              className="absolute -top-5 right-8 w-20 rotate-[10deg] pointer-events-none select-none"
+            />
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,1.2fr] items-start">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-black">
+                <Image
+                  src="/gallery/4.webp"
+                  alt="Clase de iniciación para niños en Arinaga"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width:768px) 100vw, 40vw"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-extrabold">Iniciación – Niños (6–12)</h2>
+                <div className="flex flex-wrap gap-2 my-3">
+                  <span className="px-3 py-1 bg-black text-white rounded-full text-sm">
+                    75–120 min
+                  </span>
+                  <span className="px-3 py-1 bg-white border-2 border-black rounded-full text-sm">
+                    Máx. 6–8
+                  </span>
+                  <span className="px-3 py-1 bg-yellow-300 border-2 border-black rounded-full text-sm">
+                    Nivel 0–1
+                  </span>
+                </div>
+                <p className="text-gray-700">
+                  Equilibrio, empuje, frenada y caída segura. Juegos y retos para crear
+                  bases sólidas. Material disponible el primer día (tabla y casco).
+                </p>
+              </div>
+            </div>
+          </motion.article>
+
+          {/* Iniciación Adultos */}
+          <motion.article
+            {...fadeUp(0.05)}
+            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+          >
+            <Image
+              src="/textures/tape.svg"
+              alt=""
+              width={80}
+              height={40}
+              className="absolute -top-4 left-6 w-20 rotate-[-10deg] pointer-events-none select-none"
+            />
+            <Image
+              src="/textures/tape.svg"
+              alt=""
+              width={80}
+              height={40}
+              className="absolute -top-5 right-8 w-20 rotate-[8deg] pointer-events-none select-none"
+            />
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,1.2fr] items-start">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-black">
+                <Image
+                  src="/adulto.webp"
+                  alt="Skater adulto en clase de iniciación"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width:768px) 100vw, 40vw"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-extrabold">Iniciación – Adultos</h2>
+                <div className="flex flex-wrap gap-2 my-3">
+                  <span className="px-3 py-1 bg-black text-white rounded-full text-sm">
+                    75–120 min
+                  </span>
+                  <span className="px-3 py-1 bg-white border-2 border-black rounded-full text-sm">
+                    Grupos reducidos
+                  </span>
+                  <span className="px-3 py-1 bg-green-300 border-2 border-black rounded-full text-sm">
+                    Nivel 0–1
+                  </span>
+                </div>
+                <p className="text-gray-700">
+                  Técnica básica para rodar con confianza: postura, empuje, giro y flujo
+                  por el parque. Ambiente cercano y progresión realista.
+                </p>
+              </div>
+            </div>
+          </motion.article>
         </div>
       </section>
 
-      {/* Marquee de fotos */}
-      <section className="py-8 bg-gray-100">
-        <div className="container-max">
-          <Marquee>
-            <Image src="/gallery/1.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-            <Image src="/gallery/2.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-            <Image src="/gallery/3.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-            <Image src="/gallery/4.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-            <Image src="/gallery/5.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-            <Image src="/gallery/6.webp" alt="Skate" width={200} height={150} className="rounded-lg object-cover border-2 border-black shadow-[4px_4px_0_#000]" />
-          </Marquee>
-        </div>
-      </section>
-
-      {/* Classes Grid */}
+      {/* CTA final */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {clasesData.map((clase, index) => (
-              <div
-                key={clase.id}
-                className="bg-white rounded-xl shadow-[8px_8px_0_#000] border-2 border-black overflow-hidden hover:shadow-[12px_12px_0_#000] hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={clase.image}
-                    alt={clase.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-semibold border-2 border-black shadow-[2px_2px_0_#000] ${
-                      clase.color === 'primary' 
-                        ? 'bg-yellow-300 text-black' 
-                        : 'bg-[#00e0c7] text-black'
-                    }`}>
-                      {clase.ageRange}
-                    </span>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {clase.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {clase.description}
-                  </p>
-                  
-                  <div className="flex items-center space-x-6 mb-6 text-sm text-gray-500">
-                    <div className="flex items-center space-x-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{clase.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Users className="w-4 h-4" />
-                      <span>Máx. {clase.maxStudents} alumnos</span>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                      <Target className="w-5 h-5 mr-2 text-primary-600" />
-                      Objetivos de la clase
-                    </h4>
-                    <ul className="space-y-2">
-                      {clase.objectives.map((objective, objIndex) => (
-                        <li key={objIndex} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-600 text-sm">{objective}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Link
-                    href="/contacto#formulario"
-                    className={`w-full btn-primary text-center inline-block ${
-                      clase.color === 'primary' 
-                        ? 'bg-primary-600 hover:bg-primary-700' 
-                        : 'bg-secondary-600 hover:bg-secondary-700'
-                    }`}
-                  >
-                    Apúntate a {clase.title}
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-max text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              ¿No estás seguro de tu nivel?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              No te preocupes, nuestros instructores evaluarán tu nivel en la primera clase 
-              y te recomendarán el grupo más adecuado para ti.
+          <motion.aside
+            {...fadeUp(0.05)}
+            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+          >
+            <Image
+              src="/textures/tape.svg"
+              alt=""
+              width={80}
+              height={40}
+              className="absolute -top-4 left-6 w-20 rotate-[-8deg] pointer-events-none select-none"
+            />
+            <h4 className="text-xl font-extrabold">¿Listo para empezar?</h4>
+            <p className="text-gray-700 mt-2">
+              Reserva tu clase de prueba o apúntate ahora.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contacto#formulario" className="btn-primary">
-                Reserva tu clase de prueba
+            <div className="mt-4 flex gap-3">
+              <Link
+                href="/contacto#formulario"
+                className="bg-black text-white px-5 py-2 rounded-xl font-semibold shadow-[4px_4px_0_#000] hover:-translate-y-0.5 transition"
+              >
+                Reservar
               </Link>
-              <Link href="/horarios-precios" className="btn-secondary">
-                Ver horarios y precios
-              </Link>
+              <a
+                href="https://wa.me/34613033413?text=Hola!%20Quiero%20info%20de%20clases%20de%20skate%20en%20Arinaga"
+                className="bg-green-500 text-white px-5 py-2 rounded-xl font-semibold shadow-[4px_4px_0_#000] hover:-translate-y-0.5 transition"
+                aria-label="Abrir WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
             </div>
-          </div>
+          </motion.aside>
         </div>
       </section>
-    </div>
-  )
+    </main>
+  );
 }

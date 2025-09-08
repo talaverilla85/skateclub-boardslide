@@ -56,5 +56,36 @@
     background: url("/textures/spray.svg") no-repeat center/100% 100%;
     opacity: 0.8;
   }
+  
+  /* Máscara spray: una textura que "muerde" el texto */
+  .spray-mask {
+    position: relative;
+    isolation: isolate;
+  }
+  
+  .spray-mask::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    z-index: -1;
+    background:
+      radial-gradient(12px 6px at 10% 70%, rgba(255,255,255,.25), transparent 60%),
+      radial-gradient(10px 8px at 80% 30%, rgba(255,255,255,.25), transparent 60%),
+      radial-gradient(14px 7px at 40% 50%, rgba(255,255,255,.25), transparent 60%);
+    filter: blur(1px);
+    mix-blend-mode: screen;
+    animation: sprayflow 6s ease-in-out infinite alternate;
+  }
+  
+  @keyframes sprayflow {
+    from { 
+      transform: translateY(-4px) translateX(-6px) rotate(-1deg); 
+      opacity: 0.9; 
+    }
+    to { 
+      transform: translateY(4px) translateX(6px) rotate(1deg);   
+      opacity: 0.7; 
+    }
+  }
 }
 
