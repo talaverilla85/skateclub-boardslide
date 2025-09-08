@@ -173,7 +173,7 @@ export default function GaleriaPage({
 
             {filtered.length === 0 && (
               <p className="col-span-full text-center text-gray-600">
-                No hay imágenes para esta categoría. Añade archivos a{' '}
+                No hay imágenes para esta categoría.
                 <code>/public/{catParam === 'galeria' ? 'gallery' : catParam === 'instalaciones' ? 'instalaciones' : catParam === 'eventos' ? 'eventos' : 'gallery, instalaciones o eventos'}</code>.
               </p>
             )}
