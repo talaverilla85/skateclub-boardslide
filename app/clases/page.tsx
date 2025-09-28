@@ -81,7 +81,7 @@ export default function ClasesPage() {
               <div>
                 <h2 className="text-2xl font-extrabold">Iniciación – Niños (6–12)</h2>
                 <div className="flex flex-wrap gap-2 my-3">
-                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm">
+                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>
                     75–120 min
                   </span>
                   <span className="px-3 py-1 bg-white border-2 border-[#FF6600] rounded-full text-sm">
@@ -132,7 +132,7 @@ export default function ClasesPage() {
               <div>
                 <h2 className="text-2xl font-extrabold">Iniciación – Adultos</h2>
                 <div className="flex flex-wrap gap-2 my-3">
-                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm">
+                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>
                     75–120 min
                   </span>
                   <span className="px-3 py-1 bg-white border-2 border-[#FF6600] rounded-full text-sm">
@@ -174,6 +174,7 @@ export default function ClasesPage() {
               <Link
                 href="/contacto#formulario"
                 className="bg-[#FF6600] text-white px-5 py-2 rounded-xl font-semibold shadow-[4px_4px_0_#FF6600] hover:-translate-y-0.5 transition"
+                style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}
               >
                 Reservar
               </Link>

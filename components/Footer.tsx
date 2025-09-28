@@ -19,7 +19,7 @@ const Footer = () => {
                 height={32}
                 className="object-contain"
               />
-              <span className="font-bold text-lg">Skate Club Boardslide</span>
+              <span className="font-bold text-lg" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Skate Club Boardslide</span>
             </div>
             <p className="text-gray-300 text-sm">
               Club de skate federado en Gran Canaria. Clases de iniciación para niños y adultos.
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Enlaces rápidos */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Enlaces rápidos</h3>
+            <h3 className="font-semibold text-lg" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Enlaces rápidos</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/clases" className="text-gray-300 hover:text-white transition-colors">
@@ -89,7 +89,7 @@ const Footer = () => {
 
           {/* Contacto */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contacto</h3>
+            <h3 className="font-semibold text-lg" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Contacto</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-white flex-shrink-0" />
@@ -118,7 +118,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Legal</h3>
+            <h3 className="font-semibold text-lg" style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}>Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/aviso-legal" className="text-gray-300 hover:text-white transition-colors">

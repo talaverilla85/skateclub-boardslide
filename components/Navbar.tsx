@@ -47,7 +47,7 @@ const Navbar = () => {
               className="object-contain"
               priority
             />
-            <span className="font-bold text-lg text-white">Skate Club Boardslide</span>
+            <span className="font-bold text-lg text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>Skate Club Boardslide</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,6 +57,7 @@ const Navbar = () => {
                 key={item.href}
                 href={item.href}
                 className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+                style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}
               >
                 {item.label}
               </Link>
