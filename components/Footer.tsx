@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#CD853F] text-white">
+    <footer className="bg-gradient-to-b from-[#CD853F] to-[#FF6600] text-white">
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Información del club */}
