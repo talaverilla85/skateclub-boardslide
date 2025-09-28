@@ -33,7 +33,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#FF6600] shadow-lg transition-all duration-300"
     >
       <div className="container-max">
         <div className="flex items-center justify-between h-16 px-4">
@@ -47,7 +47,7 @@ const Navbar = () => {
               className="object-contain"
               priority
             />
-            <span className="font-bold text-lg text-gray-900">Skate Club Boardslide</span>
+            <span className="font-bold text-lg text-white">Skate Club Boardslide</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-[#FF6600] transition-colors duration-200 font-medium"
+                className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
               >
                 {item.label}
               </Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -85,7 +85,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white border-t border-gray-200"
+              className="md:hidden bg-[#FF6600] border-t border-white/20"
             >
               <div className="px-4 py-4 space-y-2">
                 {navItems.map((item) => (
@@ -93,7 +93,7 @@ const Navbar = () => {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-2 text-gray-700 hover:text-[#FF6600] transition-colors duration-200 font-medium"
+                    className="block py-2 text-white hover:text-gray-200 transition-colors duration-200 font-medium"
                   >
                     {item.label}
                   </Link>
