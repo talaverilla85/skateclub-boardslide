@@ -91,7 +91,7 @@ export default function GaleriaPage({
   return (
     <div className="pt-16">
       {/* HERO urbano (spray + noise) */}
-      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-[#FF6600] to-[#CD853F] text-white">
+      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-[#CD853F] to-[#FF6600] text-white">
         <div className="container-max relative z-10 text-center">
           <h1 className="relative inline-block text-4xl md:text-5xl font-extrabold">
             Galería

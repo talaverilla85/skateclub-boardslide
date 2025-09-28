@@ -28,7 +28,7 @@ export default function GaleriaPage() {
   return (
     <div className="pt-16">
       {/* Hero simple de la sección */}
-      <section className="section-padding bg-gradient-to-br from-[#FF6600] to-[#CD853F] text-white">
+      <section className="section-padding bg-gradient-to-br from-[#CD853F] to-[#FF6600] text-white">
         <div className="container-max text-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
