@@ -12,7 +12,6 @@ export const metadata = generateMetadata({
 })
 
 // Recoge nuevas fotos sin redeploy
-export const dynamic = 'force-dynamic'
 
 type ImgItem = {
   id: string
