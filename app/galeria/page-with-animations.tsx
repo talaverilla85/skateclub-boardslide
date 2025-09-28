@@ -60,8 +60,8 @@ export default function GaleriaPage() {
                   onClick={() => setFiltro(c)}
                   className={`px-5 py-2 rounded-full border transition-colors duration-200 text-sm md:text-base ${
                     active
-                      ? 'bg-black text-white border-black'
-                      : 'border-black/30 text-black hover:bg-black hover:text-white'
+                      ? 'bg-[#FF6600] text-white border-[#FF6600]'
+                      : 'border-[#FF6600]/30 text-black hover:bg-[#FF6600] hover:text-white'
                   }`}
                 >
                   {c}

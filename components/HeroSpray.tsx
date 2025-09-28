@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function HeroSpray() {
   return (
-    <section className="relative h-[78vh] overflow-hidden bg-black">
+    <section className="relative h-[78vh] overflow-hidden bg-[#FF6600]">
       {/* Fondo: tu foto + oscurecido */}
       <div className="absolute inset-0">
         <Image
@@ -57,10 +57,10 @@ export default function HeroSpray() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 flex gap-3 justify-center"
           >
-            <a href="/contacto#formulario" className="inline-block bg-white text-black px-6 py-3 rounded-2xl font-semibold shadow-[6px_6px_0_#000] hover:-translate-y-0.5 transition">
+            <a href="/contacto#formulario" className="inline-block bg-white text-black px-6 py-3 rounded-2xl font-semibold shadow-[6px_6px_0_#FF6600] hover:-translate-y-0.5 transition">
               Reserva tu clase
             </a>
-            <a href="/arinaga-skatepark" className="inline-block bg-black/60 text-white px-6 py-3 rounded-2xl font-semibold border border-white/30 hover:bg-black/70">
+            <a href="/arinaga-skatepark" className="inline-block bg-[#FF6600]/60 text-white px-6 py-3 rounded-2xl font-semibold border border-white/30 hover:bg-[#FF6600]/70">
               Conoce el skatepark
             </a>
           </motion.div>

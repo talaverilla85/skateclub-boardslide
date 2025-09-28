@@ -131,8 +131,8 @@ export default function GaleriaPage({
                   className={[
                     'px-4 py-2 rounded-full border-2 text-sm font-extrabold shadow-[4px_4px_0_#000] transition',
                     active
-                      ? 'bg-yellow-300 border-black text-black'
-                      : 'bg-white border-black text-black hover:-translate-y-0.5',
+                      ? 'bg-yellow-300 border-[#FF6600] text-black'
+                      : 'bg-white border-[#FF6600] text-black hover:-translate-y-0.5',
                   ].join(' ')}
                 >
                   {c.label}
@@ -148,7 +148,7 @@ export default function GaleriaPage({
                 key={img.id}
                 className="group cursor-pointer hover:-translate-y-1 hover:rotate-1 transition-all duration-300"
               >
-                <div className="relative aspect-square overflow-hidden rounded-xl border-2 border-black shadow-[6px_6px_0_#000] group-hover:shadow-[8px_8px_0_#000] transition-all duration-300">
+                <div className="relative aspect-square overflow-hidden rounded-xl border-2 border-[#FF6600] shadow-[6px_6px_0_#FF6600] group-hover:shadow-[8px_8px_0_#FF6600] transition-all duration-300">
                   <Image
                     src={img.src}
                     alt={img.alt}
@@ -163,7 +163,7 @@ export default function GaleriaPage({
 
                   {/* Etiqueta */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-yellow-300 border-2 border-black shadow-[2px_2px_0_#000] text-black px-3 py-1 rounded-full text-[11px] font-extrabold">
+                    <span className="bg-yellow-300 border-2 border-[#FF6600] shadow-[2px_2px_0_#FF6600] text-black px-3 py-1 rounded-full text-[11px] font-extrabold">
                       {img.categoria}
                     </span>
                   </div>
@@ -184,7 +184,7 @@ export default function GaleriaPage({
       {/* CTA final con tape */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="relative max-w-3xl mx-auto rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000] text-center">
+          <div className="relative max-w-3xl mx-auto rounded-2xl border-2 border-[#FF6600] bg-white p-6 shadow-[8px_8px_0_#FF6600] text-center">
             <img
               src="/textures/tape.svg"
               alt=""

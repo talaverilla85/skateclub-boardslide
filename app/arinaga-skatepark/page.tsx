@@ -144,7 +144,7 @@ export default function ArinagaSkateparkPage() {
             {/* Columna 1 */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <Calendar className="w-4 h-4" />
                 </div>
                 <div>
@@ -156,7 +156,7 @@ export default function ArinagaSkateparkPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
@@ -166,7 +166,7 @@ export default function ArinagaSkateparkPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <Users className="w-4 h-4" />
                 </div>
                 <div>
@@ -179,7 +179,7 @@ export default function ArinagaSkateparkPage() {
             {/* Columna 2 */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <Shield className="w-4 h-4" />
                 </div>
                 <div>
@@ -192,7 +192,7 @@ export default function ArinagaSkateparkPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <Star className="w-4 h-4" />
                 </div>
                 <div>
@@ -205,7 +205,7 @@ export default function ArinagaSkateparkPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 bg-black text-white rounded-lg grid place-items-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#FF6600] text-white rounded-lg grid place-items-center flex-shrink-0">
                   <Shield className="w-4 h-4" />
                 </div>
                 <div>
@@ -219,7 +219,7 @@ export default function ArinagaSkateparkPage() {
           </div>
 
           {/* Nota de reconocimiento */}
-          <div className="mt-6 rounded-2xl border-2 border-black bg-white p-5 shadow-[6px_6px_0_#000] relative">
+          <div className="mt-6 rounded-2xl border-2 border-[#FF6600] bg-white p-5 shadow-[6px_6px_0_#FF6600] relative">
             <img
               src="/textures/tape.svg"
               alt=""
@@ -253,7 +253,7 @@ export default function ArinagaSkateparkPage() {
                 {/* Texto */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="mb-3">
-                    <span className="inline-block px-3 py-1 bg-yellow-300 rounded-full border-2 border-black shadow-[4px_4px_0_#000] text-xs font-bold">
+                    <span className="inline-block px-3 py-1 bg-yellow-300 rounded-full border-2 border-[#FF6600] shadow-[4px_4px_0_#FF6600] text-xs font-bold">
                       {zona.nivel}
                     </span>
                   </div>
@@ -273,7 +273,7 @@ export default function ArinagaSkateparkPage() {
 
                 {/* Imagen */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative border-2 border-black shadow-[6px_6px_0_#000]">
+                  <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden relative border-2 border-[#FF6600] shadow-[6px_6px_0_#FF6600]">
                     <Image
                       src={zona.imagen}
                       alt={zona.nombre}
@@ -288,7 +288,7 @@ export default function ArinagaSkateparkPage() {
           </div>
 
           {/* Conectividad */}
-          <div className="mt-10 rounded-2xl border-2 border-black bg-white p-5 shadow-[6px_6px_0_#000]">
+          <div className="mt-10 rounded-2xl border-2 border-[#FF6600] bg-white p-5 shadow-[6px_6px_0_#FF6600]">
             <p className="text-gray-700">
               Las áreas están <strong>perfectamente conectadas</strong> mediante rampas de transición para mantener la
               continuidad del recorrido y multiplicar las líneas posibles.
@@ -309,9 +309,9 @@ export default function ArinagaSkateparkPage() {
             {instalacionesData.map((instalacion) => (
               <div
                 key={instalacion.titulo}
-                className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0_#000] p-6 text-center"
+                className="bg-white rounded-xl border-2 border-[#FF6600] shadow-[6px_6px_0_#FF6600] p-6 text-center"
               >
-                <div className="w-12 h-12 bg-black text-white rounded-lg grid place-items-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-[#FF6600] text-white rounded-lg grid place-items-center mx-auto mb-4">
                   <instalacion.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-extrabold text-gray-900 mb-2">{instalacion.titulo}</h3>
@@ -332,7 +332,7 @@ export default function ArinagaSkateparkPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {tipsData.map((tip) => (
-              <div key={tip.titulo} className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0_#000] p-6">
+              <div key={tip.titulo} className="bg-white rounded-xl border-2 border-[#FF6600] shadow-[6px_6px_0_#FF6600] p-6">
                 <h3 className="text-xl font-extrabold text-gray-900 mb-2">{tip.titulo}</h3>
                 <p className="text-gray-700">{tip.descripcion}</p>
               </div>
@@ -351,7 +351,7 @@ export default function ArinagaSkateparkPage() {
             </p>
           </div>
 
-          <div className="rounded-xl border-2 border-black shadow-[6px_6px_0_#000] bg-white overflow-hidden">
+          <div className="rounded-xl border-2 border-[#FF6600] shadow-[6px_6px_0_#FF6600] bg-white overflow-hidden">
             <div className="aspect-video">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.123456789!2d-15.402764!3d27.860622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDUxJzM4LjIiTiAxNcKwMjQnMDkuOSJX!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses&q=Calle+las+Casuarinas+86+Arinaga+Gran+Canaria"

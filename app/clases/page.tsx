@@ -51,7 +51,7 @@ export default function ClasesPage() {
           {/* Iniciación Niños */}
           <motion.article
             {...fadeUp(0)}
-            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+            className="relative rounded-2xl border-2 border-[#FF6600] bg-white p-6 shadow-[8px_8px_0_#FF6600]"
           >
             <Image
               src="/textures/tape.svg"
@@ -69,7 +69,7 @@ export default function ClasesPage() {
             />
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,1.2fr] items-start">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-black">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-[#FF6600]">
                 <Image
                   src="/gallery/2.webp"
                   alt="Clase de iniciación para niños en Arinaga"
@@ -81,13 +81,13 @@ export default function ClasesPage() {
               <div>
                 <h2 className="text-2xl font-extrabold">Iniciación – Niños (6–12)</h2>
                 <div className="flex flex-wrap gap-2 my-3">
-                  <span className="px-3 py-1 bg-black text-white rounded-full text-sm">
+                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm">
                     75–120 min
                   </span>
-                  <span className="px-3 py-1 bg-white border-2 border-black rounded-full text-sm">
+                  <span className="px-3 py-1 bg-white border-2 border-[#FF6600] rounded-full text-sm">
                     Máx. 6–8
                   </span>
-                  <span className="px-3 py-1 bg-yellow-300 border-2 border-black rounded-full text-sm">
+                  <span className="px-3 py-1 bg-yellow-300 border-2 border-[#FF6600] rounded-full text-sm">
                     Nivel 0–1
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function ClasesPage() {
           {/* Iniciación Adultos */}
           <motion.article
             {...fadeUp(0.05)}
-            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+            className="relative rounded-2xl border-2 border-[#FF6600] bg-white p-6 shadow-[8px_8px_0_#FF6600]"
           >
             <Image
               src="/textures/tape.svg"
@@ -120,7 +120,7 @@ export default function ClasesPage() {
             />
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr,1.2fr] items-start">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-black">
+              <div className="relative aspect-[4/3] rounded-xl overflow-hidden border-2 border-[#FF6600]">
                 <Image
                   src="/adulto.webp"
                   alt="Skater adulto en clase de iniciación"
@@ -132,13 +132,13 @@ export default function ClasesPage() {
               <div>
                 <h2 className="text-2xl font-extrabold">Iniciación – Adultos</h2>
                 <div className="flex flex-wrap gap-2 my-3">
-                  <span className="px-3 py-1 bg-black text-white rounded-full text-sm">
+                  <span className="px-3 py-1 bg-[#FF6600] text-white rounded-full text-sm">
                     75–120 min
                   </span>
-                  <span className="px-3 py-1 bg-white border-2 border-black rounded-full text-sm">
+                  <span className="px-3 py-1 bg-white border-2 border-[#FF6600] rounded-full text-sm">
                     Grupos reducidos
                   </span>
-                  <span className="px-3 py-1 bg-green-300 border-2 border-black rounded-full text-sm">
+                  <span className="px-3 py-1 bg-green-300 border-2 border-[#FF6600] rounded-full text-sm">
                     Nivel 0–1
                   </span>
                 </div>
@@ -157,7 +157,7 @@ export default function ClasesPage() {
         <div className="container-max">
           <motion.aside
             {...fadeUp(0.05)}
-            className="relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000]"
+            className="relative rounded-2xl border-2 border-[#FF6600] bg-white p-6 shadow-[8px_8px_0_#FF6600]"
           >
             <Image
               src="/textures/tape.svg"
@@ -173,7 +173,7 @@ export default function ClasesPage() {
             <div className="mt-4 flex gap-3">
               <Link
                 href="/contacto#formulario"
-                className="bg-black text-white px-5 py-2 rounded-xl font-semibold shadow-[4px_4px_0_#000] hover:-translate-y-0.5 transition"
+                className="bg-[#FF6600] text-white px-5 py-2 rounded-xl font-semibold shadow-[4px_4px_0_#FF6600] hover:-translate-y-0.5 transition"
               >
                 Reservar
               </Link>

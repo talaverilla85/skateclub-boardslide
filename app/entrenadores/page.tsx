@@ -57,7 +57,7 @@ export default function EntrenadoresPage() {
             {entrenadoresData.map((entrenador) => (
               <article
                 key={entrenador.id}
-                className="relative rounded-2xl border-2 border-black bg-white shadow-[8px_8px_0_#000] overflow-hidden"
+                className="relative rounded-2xl border-2 border-[#FF6600] bg-white shadow-[8px_8px_0_#FF6600] overflow-hidden"
               >
                 {/* tape decorativo */}
                 <img
@@ -72,7 +72,7 @@ export default function EntrenadoresPage() {
                 />
 
                 {/* foto */}
-                <div className="relative h-64 border-b-2 border-black">
+                <div className="relative h-64 border-b-2 border-[#FF6600]">
                   <Image
                     src={entrenador.imagen}
                     alt={entrenador.nombre}
@@ -80,7 +80,7 @@ export default function EntrenadoresPage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
                   />
-                  <span className="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-xs font-bold border-2 border-white">
+                  <span className="absolute top-4 right-4 bg-[#FF6600] text-white px-3 py-1 rounded-full text-xs font-bold border-2 border-white">
                     {entrenador.especialidad}
                   </span>
                 </div>
@@ -90,11 +90,11 @@ export default function EntrenadoresPage() {
                   <header className="mb-2">
                     <h3 className="text-2xl font-extrabold text-gray-900">{entrenador.nombre}</h3>
                     <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-gray-700">
-                      <span className="inline-flex items-center gap-1 bg-yellow-300 border-2 border-black rounded-full px-3 py-1 font-semibold">
+                      <span className="inline-flex items-center gap-1 bg-yellow-300 border-2 border-[#FF6600] rounded-full px-3 py-1 font-semibold">
                         <Award className="w-4 h-4" />
                         {entrenador.experiencia} de experiencia
                       </span>
-                      <span className="inline-flex items-center gap-1 bg-white border-2 border-black rounded-full px-3 py-1 font-semibold">
+                      <span className="inline-flex items-center gap-1 bg-white border-2 border-[#FF6600] rounded-full px-3 py-1 font-semibold">
                         <Users className="w-4 h-4" />
                         Formación certificada
                       </span>
@@ -136,7 +136,7 @@ export default function EntrenadoresPage() {
                   </div>
 
                   {/* Horarios en caja ligera (sin CTA para no repetir) */}
-                  <div className="rounded-xl border-2 border-black bg-gray-50 p-4">
+                  <div className="rounded-xl border-2 border-[#FF6600] bg-gray-50 p-4">
                     <h4 className="font-extrabold text-gray-900 mb-1 flex items-center">
                       <MapPin className="w-5 h-5 mr-2 text-black" />
                       Horarios

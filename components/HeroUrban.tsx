@@ -27,7 +27,7 @@ export default function HeroUrban(){
         >
           <Link 
             href="/contacto#formulario"
-            className="inline-block bg-white text-black px-6 py-3 rounded-2xl shadow-[6px_6px_0_#000] hover:-translate-y-0.5 transition"
+            className="inline-block bg-white text-black px-6 py-3 rounded-2xl shadow-[6px_6px_0_#FF6600] hover:-translate-y-0.5 transition"
           >
             Reserva tu clase
           </Link>

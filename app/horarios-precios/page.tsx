@@ -136,7 +136,7 @@ Detalles:
 
           <motion.div
             {...fadeUp(0.05)}
-            className="relative rounded-2xl border-2 border-black bg-white shadow-[8px_8px_0_#000] overflow-hidden"
+            className="relative rounded-2xl border-2 border-[#FF6600] bg-white shadow-[8px_8px_0_#FF6600] overflow-hidden"
           >
             {/* cintas arriba: muy sutil */}
             <img src="/textures/tape.svg" alt="" className="absolute -top-4 left-6 w-20 rotate-[-8deg] pointer-events-none select-none" />
@@ -144,7 +144,7 @@ Detalles:
 
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-50 border-b-2 border-black/10">
+                <thead className="bg-gray-50 border-b-2 border-[#FF6600]/10">
                   <tr>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Día</th>
                     <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Horario</th>
@@ -200,14 +200,14 @@ Detalles:
               <motion.div
                 key={precio.tipo}
                 {...fadeUp(0.05 + index * 0.05)}
-                className={`relative rounded-2xl border-2 border-black bg-white p-6 shadow-[8px_8px_0_#000] ${
+                className={`relative rounded-2xl border-2 border-[#FF6600] bg-white p-6 shadow-[8px_8px_0_#FF6600] ${
                   precio.popular ? 'md:rotate-[-0.8deg]' : 'md:rotate-[0.6deg]'
                 }`}
               >
                 {/* cinta */}
                 <img src="/textures/tape.svg" alt="" className="absolute -top-4 left-6 w-20 rotate-[-8deg] pointer-events-none select-none" />
                 {precio.popular && (
-                  <span className="absolute -top-3 right-4 bg-black text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-white">
+                  <span className="absolute -top-3 right-4 bg-[#FF6600] text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-white">
                     Más popular
                   </span>
                 )}
@@ -216,7 +216,7 @@ Detalles:
                   <h3 className="text-xl font-extrabold text-gray-900">{precio.tipo}</h3>
                   <p className="text-gray-600 text-sm">{precio.descripcion}</p>
 
-                  <div className="mt-4 inline-flex items-center gap-2 bg-yellow-300 border-2 border-black px-4 py-2 rounded-xl shadow-[4px_4px_0_#000]">
+                  <div className="mt-4 inline-flex items-center gap-2 bg-yellow-300 border-2 border-[#FF6600] px-4 py-2 rounded-xl shadow-[4px_4px_0_#FF6600]">
                     <Euro className="w-5 h-5 text-black" />
                     <span className="text-3xl font-extrabold text-black">{precio.precio}</span>
                     {precio.precioOriginal && (
@@ -236,7 +236,7 @@ Detalles:
 
                 <button
                   onClick={() => handleWhatsAppClick(precio)}
-                  className="w-full py-3 px-4 rounded-xl font-semibold bg-black text-white hover:-translate-y-0.5 transition shadow-[4px_4px_0_#000]"
+                  className="w-full py-3 px-4 rounded-xl font-semibold bg-[#FF6600] text-white hover:-translate-y-0.5 transition shadow-[4px_4px_0_#FF6600]"
                 >
                   Elegir plan por WhatsApp
                 </button>
@@ -259,11 +259,11 @@ Detalles:
               <motion.details
                 key={p.titulo}
                 {...fadeUp(0.05 + i * 0.05)}
-                className="group rounded-2xl border-2 border-black bg-white p-5 shadow-[6px_6px_0_#000]"
+                className="group rounded-2xl border-2 border-[#FF6600] bg-white p-5 shadow-[6px_6px_0_#FF6600]"
               >
                 <summary className="flex items-center justify-between cursor-pointer list-none">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-black text-white rounded-lg grid place-items-center">
+                    <div className="w-10 h-10 bg-[#FF6600] text-white rounded-lg grid place-items-center">
                       <Calendar className="w-5 h-5" />
                     </div>
                     <h3 className="text-lg font-extrabold text-gray-900">{p.titulo}</h3>
