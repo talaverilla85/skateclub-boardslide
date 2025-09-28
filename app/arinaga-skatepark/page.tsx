@@ -104,7 +104,7 @@ export default function ArinagaSkateparkPage() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-black to-neutral-900 text-white">
+      <section className="section-padding relative overflow-hidden bg-gradient-to-b from-[#FF6600] to-[#CD853F] text-white">
         <div className="container-max relative z-10 text-center">
           <h1 className="relative inline-block text-4xl md:text-5xl font-extrabold mb-2">
             Arinaga Skatepark
@@ -131,7 +131,7 @@ export default function ArinagaSkateparkPage() {
             className="object-cover opacity-80"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FF6600]/60 to-transparent" />
         </div>
       </section>
 

@@ -45,7 +45,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         {/* Fondo oscuro solo detrás del contenido */}
-        <div className="absolute inset-0 bg-black/50 rounded-2xl -m-8" />
+        <div className="absolute inset-0 bg-[#FF6600]/50 rounded-2xl -m-8" />
         
         <motion.div
           ref={ref}
