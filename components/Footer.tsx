@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#FF6600] text-white">
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Información del club */}
@@ -29,7 +29,7 @@ const Footer = () => {
                 href="https://www.instagram.com/skateclubboardslide"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -38,7 +38,7 @@ const Footer = () => {
                 href="https://www.facebook.com/skateclubboardslide"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -47,7 +47,7 @@ const Footer = () => {
                 href="https://wa.me/34613033413"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-400 transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle size={20} />
@@ -92,11 +92,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg">Contacto</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-primary-400 flex-shrink-0" />
+                <MapPin size={16} className="text-white flex-shrink-0" />
                 <span className="text-gray-300">Playa de Arinaga, Gran Canaria</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-primary-400 flex-shrink-0" />
+                <Phone size={16} className="text-white flex-shrink-0" />
                 <a
                   href="tel:+34613033413"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -105,7 +105,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-primary-400 flex-shrink-0" />
+                <Mail size={16} className="text-white flex-shrink-0" />
                 <a
                   href="mailto:skateclubgrancanaria@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
@@ -139,7 +139,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-gray-300">
           <p>&copy; {currentYear} Skate Club Boardslide. Todos los derechos reservados.</p>
         </div>
       </div>
