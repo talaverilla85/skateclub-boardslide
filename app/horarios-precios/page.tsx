@@ -228,7 +228,7 @@ Detalles:
                 <ul className="space-y-3 mb-6">
                   {precio.beneficios.map((b, k) => (
                     <li key={k} className="flex items-center text-sm text-gray-700">
-                      <span className="inline-block w-2 h-2 bg-black rounded-full mr-3" />
+                      <span className="inline-block w-2 h-2 bg-[#FF6600] rounded-full mr-3" />
                       {b}
                     </li>
                   ))}

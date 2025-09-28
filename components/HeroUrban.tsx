@@ -7,7 +7,7 @@ export default function HeroUrban(){
   return (
     <section className="relative h-[78vh]">
       <Image src="/hero-skatepark.webp" alt="Arinaga Skatepark" fill className="object-cover" priority />
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-[#FF6600]/35" />
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
         <motion.h1 
           initial={{y:20,opacity:0}} 

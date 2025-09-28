@@ -113,7 +113,7 @@ export default function EntrenadoresPage() {
                       <ul className="space-y-1">
                         {entrenador.certificaciones.map((cert, i) => (
                           <li key={i} className="text-sm text-gray-700 flex items-center">
-                            <span className="inline-block w-2 h-2 bg-black rounded-full mr-2" />
+                            <span className="inline-block w-2 h-2 bg-[#FF6600] rounded-full mr-2" />
                             {cert}
                           </li>
                         ))}

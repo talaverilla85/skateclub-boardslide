@@ -264,7 +264,7 @@ export default function ArinagaSkateparkPage() {
                   <ul className="space-y-2">
                     {zona.caracteristicas.map((c, i) => (
                       <li key={i} className="flex items-center text-gray-700">
-                        <span className="inline-block w-2 h-2 bg-black rounded-full mr-3" />
+                        <span className="inline-block w-2 h-2 bg-[#FF6600] rounded-full mr-3" />
                         {c}
                       </li>
                     ))}
