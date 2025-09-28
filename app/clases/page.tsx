@@ -15,7 +15,7 @@ export default function ClasesPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-[#CD853F] to-[#FF6600] text-white relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-b from-[#FF6600] to-[#CD853F] text-white relative overflow-hidden">
         <div className="container-max relative z-10">
           <motion.h1
             {...fadeUp(0)}
