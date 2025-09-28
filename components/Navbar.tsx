@@ -95,6 +95,7 @@ const Navbar = () => {
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="block py-2 text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+                    style={{textShadow: '1px 1px 2px rgba(0,0,0,0.7)'}}
                   >
                     {item.label}
                   </Link>

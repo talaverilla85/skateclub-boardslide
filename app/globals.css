@@ -26,7 +26,7 @@
 @layer components {
   .btn-primary {
     @apply bg-white hover:bg-gray-100 text-[#FF6600] font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#FF6600] focus:ring-offset-2;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   }
   
   .btn-secondary {
